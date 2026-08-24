@@ -142,17 +142,39 @@ npm publish --access public      # npm login ke baad
 
 Poori documentation: [`packages/ngx-agui/README.md`](packages/ngx-agui/README.md)
 
-**Do development modes:**
+**Demo app package ko npm se leta hai** — bilkul jaise koi bhi asli user leta hai:
 
-| Mode | Kaise | Kab |
-|---|---|---|
-| **Source link** (abhi yahi hai) | `frontend/tsconfig.json` ke `paths` package ke source par point karte hain | Package par kaam karte waqt — edit karo, dev server foran rebuild kar deta hai |
-| **Real package** | `npm install <tarball ya npm se>` aur `paths` se mapping hata dein | Test karne ke liye ke published package sach mein chalta hai |
+```bash
+npm install @masad-ilyas-gujar/ngx-agui
+```
 
-> ⚠️ `paths` mein `@angular/*`, `rxjs`, `tslib` ki mapping bhi hai. Wo isliye
-> hai ke package `frontend/node_modules` ke **bahar** hai — us ke bagair
-> TypeScript `@angular/core` resolve nahi kar pata, aur Angular ki do copies
-> bundle ho jati hain.
+### ⚠️ Package par kaam karna ho to — ek trap se bachein
+
+Package ke source ko `tsconfig.json` ke `paths` se link karna **tempting** hai,
+magar ye ek nazuk bug deta hai:
+
+```
+NG0203: The `EnvironmentInjector` token injection failed.
+`inject()` function must be called from an injection context
+```
+
+**Wajah:** `packages/ngx-agui/node_modules` mein Angular ki apni copy hoti hai
+(ng-packagr ke liye zaroori). Source-link karne par package us copy se resolve
+karta hai aur app apni copy se — **do Angular instances** bundle ho jate hain,
+aur injection context tootta hai. App ka page bilkul khali aa jata hai.
+
+Isliye package par kaam karne ka mehfooz tareeqa:
+
+```bash
+cd packages/ngx-agui
+npm run build                      # dist/ mein naya build
+cd ../../frontend
+npm install ../dist/masad-ilyas-gujar-ngx-agui   # local build install karein
+```
+
+> 💡 Ye masla sirf tab pakda jata hai jab aap app ko **browser mein** kholein.
+> `ng build` aur API tests dono pass ho jate hain — kyunki bug runtime par
+> hota hai, compile time par nahi.
 
 Publish karne ka poora tareeqa: [`packages/ngx-agui/PUBLISHING.md`](packages/ngx-agui/PUBLISHING.md)
 
