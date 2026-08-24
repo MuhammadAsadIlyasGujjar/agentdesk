@@ -262,7 +262,7 @@ Saaf saaf — taake ghalat tawaqqu na ho:
 
 ## Contributing / Issues
 
-Ye package [AgentDesk](https://github.com/) reference app se nikala gaya hai.
+Ye package [AgentDesk](https://github.com/MuhammadAsadIlyasGujjar/agentdesk) reference app se nikala gaya hai.
 Bug ya feature request ho to issue kholein.
 
 ## License

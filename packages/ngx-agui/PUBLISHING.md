@@ -161,10 +161,10 @@ karte hain):
 ```json
 "repository": {
   "type": "git",
-  "url": "git+https://github.com/AAPKA-USERNAME/ngx-agui.git"
+  "url": "git+https://github.com/MuhammadAsadIlyasGujjar/agentdesk.git"
 },
-"homepage": "https://github.com/AAPKA-USERNAME/ngx-agui#readme",
-"bugs": { "url": "https://github.com/AAPKA-USERNAME/ngx-agui/issues" }
+"homepage": "https://github.com/MuhammadAsadIlyasGujjar/agentdesk#readme",
+"bugs": { "url": "https://github.com/MuhammadAsadIlyasGujjar/agentdesk/issues" }
 ```
 
 ---
