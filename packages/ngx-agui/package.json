@@ -1,0 +1,46 @@
+{
+  "name": "@masad-ilyas-gujar/ngx-agui",
+  "version": "0.1.0",
+  "description": "AG-UI protocol client for Angular — SSE streaming, signals store, client-side tools, and human-in-the-loop approvals. Works with any AG-UI compatible agent backend.",
+  "author": "M. Asad Ilyas Gujar",
+  "license": "MIT",
+  "keywords": [
+    "angular",
+    "ag-ui",
+    "agui",
+    "agent",
+    "ai-agent",
+    "llm",
+    "streaming",
+    "sse",
+    "signals",
+    "copilot",
+    "generative-ui",
+    "human-in-the-loop"
+  ],
+  "peerDependencies": {
+    "@angular/common": ">=18.0.0",
+    "@angular/core": ">=18.0.0",
+    "@angular/forms": ">=18.0.0",
+    "rxjs": "^7.0.0"
+  },
+  "sideEffects": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "ng-packagr -p ng-package.json",
+    "publish:npm": "npm run build && cd ../../dist/masad-ilyas-gujar-ngx-agui && npm publish --access public"
+  },
+  "devDependencies": {
+    "@angular/common": "^21.2.0",
+    "@angular/compiler": "^21.2.0",
+    "@angular/compiler-cli": "^21.2.0",
+    "@angular/core": "^21.2.0",
+    "@angular/forms": "^21.2.0",
+    "ng-packagr": "^21.0.0",
+    "rxjs": "^7.8.2",
+    "tslib": "^2.8.1",
+    "typescript": "~5.9.3"
+  }
+}

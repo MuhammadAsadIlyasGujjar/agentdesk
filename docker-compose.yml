@@ -1,0 +1,68 @@
+# ============================================================
+#  AgentDesk — teen services: db + backend + frontend
+#  Chalane ke liye:  docker compose up --build
+# ============================================================
+services:
+
+  # ---------- 1. PostgreSQL ----------
+  db:
+    image: postgres:16-alpine
+    container_name: agentdesk-db
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-agent}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-agent123}
+      POSTGRES_DB: ${POSTGRES_DB:-agentdesk}
+    ports:
+      - "${POSTGRES_PORT:-5432}:5432"
+    volumes:
+      # Named volume => container delete hone par bhi data bacha rehta hai
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      # Backend tabhi start hoga jab DB sach mein ready ho
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-agent} -d ${POSTGRES_DB:-agentdesk}"]
+      interval: 5s
+      timeout: 5s
+      retries: 12
+
+  # ---------- 2. NestJS backend ----------
+  backend:
+    build:
+      context: ./backend
+    container_name: agentdesk-api
+    restart: unless-stopped
+    depends_on:
+      db:
+        condition: service_healthy      # <-- healthcheck ka faida yahan
+    environment:
+      NODE_ENV: production
+      PORT: 3000
+      DB_HOST: db                        # <-- compose ka service name = hostname
+      DB_PORT: 5432
+      DB_USER: ${POSTGRES_USER:-agent}
+      DB_PASSWORD: ${POSTGRES_PASSWORD:-agent123}
+      DB_NAME: ${POSTGRES_DB:-agentdesk}
+      DB_SYNCHRONIZE: ${DB_SYNCHRONIZE:-true}
+      DB_LOGGING: ${DB_LOGGING:-false}
+      LLM_PROVIDER: ${LLM_PROVIDER:-mock}
+      ANTHROPIC_API_KEY: ${ANTHROPIC_API_KEY:-}
+      ANTHROPIC_MODEL: ${ANTHROPIC_MODEL:-claude-opus-5}
+      ANTHROPIC_MAX_TOKENS: ${ANTHROPIC_MAX_TOKENS:-16000}
+      AGENT_MAX_STEPS: ${AGENT_MAX_STEPS:-8}
+      CORS_ORIGIN: "*"
+    ports:
+      - "${BACKEND_PORT:-3000}:3000"
+
+  # ---------- 3. Angular frontend (nginx) ----------
+  frontend:
+    build:
+      context: ./frontend
+    container_name: agentdesk-web
+    restart: unless-stopped
+    depends_on:
+      - backend
+    ports:
+      - "${FRONTEND_PORT:-4200}:80"
+
+volumes:
+  pgdata:

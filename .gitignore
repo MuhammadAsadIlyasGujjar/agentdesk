@@ -1,0 +1,25 @@
+# dependencies
+node_modules/
+
+# builds
+dist/
+.angular/
+out-tsc/
+
+# local dev database (embedded postgres data)
+.pgdata/
+
+# secrets — .env kabhi commit na ho
+.env
+.env.*
+!.env.example
+
+# packed tarballs
+share/*.tgz
+*.tgz
+
+# logs / os
+*.log
+npm-debug.log*
+.DS_Store
+Thumbs.db

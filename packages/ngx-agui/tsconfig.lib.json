@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "noImplicitOverride": true,
+    "noImplicitReturns": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "moduleResolution": "bundler",
+    "importHelpers": true,
+    "target": "ES2022",
+    "module": "preserve",
+    "declaration": true,
+    "declarationMap": true,
+    "outDir": "../../dist/out-tsc/lib",
+    "types": []
+  },
+  "angularCompilerOptions": {
+    "strictTemplates": true,
+    "compilationMode": "partial"
+  },
+  "include": ["src/**/*.ts"]
+}

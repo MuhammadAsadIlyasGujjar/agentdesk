@@ -1,0 +1,43 @@
+<div class="chat">
+
+  <div class="stream">
+    @if (agent.isEmpty()) {
+      <div class="welcome">
+        <h2>🤖 AgentDesk</h2>
+        <p>Store ka assistant. Ye poochh kar dekhein:</p>
+        <div class="chips">
+          @for (s of suggestions; track s) {
+            <button (click)="use(s)">{{ s }}</button>
+          }
+        </div>
+      </div>
+    }
+
+    <!--
+      Poori timeline ek component mein — user bubbles, streaming text,
+      tool cards, approval cards. Apna design chahiye to isay hata kar
+      agent.timeline() par khud @switch likh lein.
+    -->
+    <agui-timeline />
+  </div>
+
+  <!-- ask_user_confirmation tool ka dialog -->
+  <agui-confirm-dialog />
+
+  <div class="composer">
+    <input
+      type="text"
+      placeholder="Kuch poochhein... (e.g. laptop dikhao)"
+      [ngModel]="draft()"
+      (ngModelChange)="draft.set($event)"
+      (keyup.enter)="send()"
+      [disabled]="agent.running()" />
+
+    @if (agent.running()) {
+      <button class="stop" (click)="agent.stop()">⏹ Stop</button>
+    } @else {
+      <button class="send" (click)="send()" [disabled]="!draft().trim()">Bhejo</button>
+    }
+    <button class="ghost" (click)="agent.reset()" title="Nayi chat">🗑</button>
+  </div>
+</div>
