@@ -1,0 +1,23 @@
+packages/ngx-agui/package.json
+  s_a57a2fba20e728::t_5a7eeeadca190d 45-53
+packages/ngx-agui/PUBLISHING.md
+  s_a57a2fba20e728::t_36d9e7b8223281 164,166-167
+packages/ngx-agui/README.md
+  s_a57a2fba20e728::t_027cde93c2cf08 265
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.24",
+  "base_commit_sha": "76cf9d97cd3fb1b9068e1b95e311fe85b1bcbf34",
+  "prompts": {},
+  "sessions": {
+    "s_a57a2fba20e728": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "ef98205d-43e1-4c23-953f-1729d58b64cb",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Muhammad Asad Ilyas <muhammadilyas@exceedgulf.com>"
+    }
+  }
+}
