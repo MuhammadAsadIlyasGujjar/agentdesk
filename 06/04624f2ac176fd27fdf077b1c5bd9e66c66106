@@ -1,0 +1,201 @@
+.env.example
+  s_a57a2fba20e728::t_e40648a98a4c93 1-46
+.gitignore
+  s_a57a2fba20e728::t_e743b2e0e356ad 1-25
+README.md
+  s_a57a2fba20e728::t_75e47f170d04d0 1-335
+backend/.dockerignore
+  s_a57a2fba20e728::t_9cdf31b3f31a2f 1-4
+backend/Dockerfile
+  s_a57a2fba20e728::t_48ce005e68fc55 1-24
+backend/nest-cli.json
+  s_a57a2fba20e728::t_b2f5b1102ff69e 1-8
+backend/package-lock.json
+  s_a57a2fba20e728::t_f1a46d7662f33f 1-5767
+backend/package.json
+  s_a57a2fba20e728::t_94a50d223277a4 1-37
+backend/scripts/dev-db.mjs
+  s_a57a2fba20e728::t_8abafdc2030d2b 1-48
+backend/scripts/ensure-utf8-db.mjs
+  s_a57a2fba20e728::t_c020b8699ca52a 1-30
+backend/src/agent/agent.controller.ts
+  s_a57a2fba20e728::t_56947b82e6ca6c 1-88
+backend/src/agent/agent.module.ts
+  s_a57a2fba20e728::t_4c165141bc87fd 1-56
+backend/src/agent/agent.service.ts
+  s_a57a2fba20e728::t_a7d85496ec41f3 1-497
+backend/src/agent/agent.types.ts
+  s_a57a2fba20e728::t_464fb72c5bbe5a 1-145
+backend/src/agent/dto/run.dto.ts
+  s_a57a2fba20e728::t_65603514cfbd3f 1-40
+backend/src/agent/guardrails/guardrails.service.ts
+  s_a57a2fba20e728::t_929cc3a8bc806d 1-112
+backend/src/agent/llm/anthropic.provider.ts
+  s_a57a2fba20e728::t_feb9695b0687b0 1-122
+backend/src/agent/llm/llm.provider.ts
+  s_a57a2fba20e728::t_efea20b788acf4 1-30
+backend/src/agent/llm/mock.provider.ts
+  s_a57a2fba20e728::t_05642f0a289e37 1-347
+backend/src/agent/run-store.service.ts
+  s_a57a2fba20e728::t_7ca734f93aebfc 1-52
+backend/src/agent/tools/server-tools.service.ts
+  s_a57a2fba20e728::t_3f929b5b411677 1-296
+backend/src/app.module.ts
+  s_a57a2fba20e728::t_b7eb14e1f4dea3 1-66
+backend/src/catalog/catalog.controller.ts
+  s_a57a2fba20e728::t_ace1713b08d1a7 1-33
+backend/src/catalog/catalog.module.ts
+  s_a57a2fba20e728::t_647a5ac407f66a 1-13
+backend/src/catalog/catalog.service.ts
+  s_a57a2fba20e728::t_45a1336b5c25c9 1-45
+backend/src/entities/conversation.entity.ts
+  s_a57a2fba20e728::t_851d2cfe53ce45 1-25
+backend/src/entities/message.entity.ts
+  s_a57a2fba20e728::t_ea532437efaa2f 1-31
+backend/src/entities/numeric.transformer.ts
+  s_a57a2fba20e728::t_520dce88c89e33 1-10
+backend/src/entities/order-item.entity.ts
+  s_a57a2fba20e728::t_540be6573a0cb2 1-26
+backend/src/entities/order.entity.ts
+  s_a57a2fba20e728::t_8f7ec10a15fa98 1-42
+backend/src/entities/product.entity.ts
+  s_a57a2fba20e728::t_75258e63218418 1-35
+backend/src/entities/tool-run.entity.ts
+  s_a57a2fba20e728::t_04579a2ee7e5d8 1-37
+backend/src/main.ts
+  s_a57a2fba20e728::t_b9ba779d30e2c0 1-28
+backend/src/seed/seed.module.ts
+  s_a57a2fba20e728::t_f5478ce956d7ff 1-11
+backend/src/seed/seed.service.ts
+  s_a57a2fba20e728::t_1381294c28f3b7 1-81
+backend/tsconfig.json
+  s_a57a2fba20e728::t_365f63101da5f0 1-24
+docker-compose.yml
+  s_a57a2fba20e728::t_23f50da7fd6a93 1-68
+docs/01-shuru-yahan-se.md
+  s_a57a2fba20e728::t_a61eed0f4b8d91 1-152
+docs/02-backend-walkthrough.md
+  s_a57a2fba20e728::t_2b3e0a51278c76 1-252
+docs/03-frontend-walkthrough.md
+  s_a57a2fba20e728::t_e8c052bc2cdd95 1-246
+docs/04-database-aur-docker.md
+  s_a57a2fba20e728::t_97b94a351086f9 1-282
+docs/05-apna-feature-banayein.md
+  s_a57a2fba20e728::t_acf85435dbd09b 1-233
+frontend/.dockerignore
+  s_a57a2fba20e728::t_ce3a298bef4ba0 1-3
+frontend/Dockerfile
+  s_a57a2fba20e728::t_1ab9b805f51ee5 1-17
+frontend/angular.json
+  s_a57a2fba20e728::t_56bb18058885b3 1-55
+frontend/nginx.conf
+  s_a57a2fba20e728::t_7827a1b45fd605 1-26
+frontend/package-lock.json
+  s_a57a2fba20e728::t_1e2f797c979717 1-7744
+frontend/package.json
+  s_a57a2fba20e728::t_554d562fe6fdc4 1-29
+frontend/proxy.conf.json
+  s_a57a2fba20e728::t_dbf6d7c1fb9a47 1-7
+frontend/src/app/app.config.ts
+  s_a57a2fba20e728::t_e97935a5a11b55 1-39
+frontend/src/app/app.routes.ts
+  s_a57a2fba20e728::t_4edc70b6cf6a06 1-19
+frontend/src/app/app.ts
+  s_a57a2fba20e728::t_92340eca6cf7a0 1-54
+frontend/src/app/core/app-client-tools.ts
+  s_a57a2fba20e728::t_82bf60d1d3a95d 1-75
+frontend/src/app/core/services/api.service.ts
+  s_a57a2fba20e728::t_05870dfc071ccd 1-28
+frontend/src/app/core/services/cart.store.ts
+  s_a57a2fba20e728::t_c30038da2da84a 1-42
+frontend/src/app/features/chat/chat.component.html
+  s_a57a2fba20e728::t_e6659332bb6a41 1-43
+frontend/src/app/features/chat/chat.component.scss
+  s_a57a2fba20e728::t_413023b7f23fc0 1-138
+frontend/src/app/features/chat/chat.component.ts
+  s_a57a2fba20e728::t_aa1e8f83ca82a1 1-49
+frontend/src/app/features/chat/tool-views/action-result.component.ts
+  s_a57a2fba20e728::t_6a5bb2f15c7e3a 1-42
+frontend/src/app/features/chat/tool-views/order-status.component.ts
+  s_a57a2fba20e728::t_aa4080109708bf 1-60
+frontend/src/app/features/chat/tool-views/orders-list.component.ts
+  s_a57a2fba20e728::t_e145d54479e1dd 1-34
+frontend/src/app/features/chat/tool-views/product-grid.component.ts
+  s_a57a2fba20e728::t_e0afd82ab406a8 1-63
+frontend/src/app/features/chat/tool-views/sales-chart.component.ts
+  s_a57a2fba20e728::t_1c778ad677cb09 1-43
+frontend/src/app/features/orders/orders.component.ts
+  s_a57a2fba20e728::t_b5c75e900c1ade 1-56
+frontend/src/app/features/shop/shop.component.ts
+  s_a57a2fba20e728::t_3b383f0f63d86d 1-57
+frontend/src/index.html
+  s_a57a2fba20e728::t_ca45576f4b0529 1-13
+frontend/src/main.ts
+  s_a57a2fba20e728::t_63fcc054cf0388 1-5
+frontend/src/styles.scss
+  s_a57a2fba20e728::t_75e94cf2a23894 1-12
+frontend/tsconfig.app.json
+  s_a57a2fba20e728::t_1d6c07847228a9 1-9
+frontend/tsconfig.json
+  s_a57a2fba20e728::t_84b3f505695bc5 1-33
+packages/ngx-agui/CHANGELOG.md
+  s_a57a2fba20e728::t_dd0e8aa548994c 1-30
+packages/ngx-agui/LICENSE
+  s_a57a2fba20e728::t_05eafac8997e1a 1-21
+packages/ngx-agui/PUBLISHING.md
+  s_a57a2fba20e728::t_9f02c3ef0e28c3 1-217
+packages/ngx-agui/README.md
+  s_a57a2fba20e728::t_9da3350ec5f817 1-272
+packages/ngx-agui/ng-package.json
+  s_a57a2fba20e728::t_08bdd2aea6d271 1-7
+packages/ngx-agui/package-lock.json
+  s_a57a2fba20e728::t_2f2f16a946ff5b 1-3530
+packages/ngx-agui/package.json
+  s_a57a2fba20e728::t_ae6a4615eed261 1-46
+packages/ngx-agui/src/lib/core/agent-session.service.ts
+  s_a57a2fba20e728::t_cf7145a57a58c9 1-239
+packages/ngx-agui/src/lib/core/agui-client.service.ts
+  s_a57a2fba20e728::t_07798178bf0407 1-109
+packages/ngx-agui/src/lib/core/agui.config.ts
+  s_a57a2fba20e728::t_692e6635dd4733 1-38
+packages/ngx-agui/src/lib/core/client-tool.registry.ts
+  s_a57a2fba20e728::t_786189639c3710 1-92
+packages/ngx-agui/src/lib/core/conversation.store.ts
+  s_a57a2fba20e728::t_42ef9888939cc5 1-194
+packages/ngx-agui/src/lib/models/ag-ui.events.ts
+  s_a57a2fba20e728::t_f86d1e89accbe3 1-75
+packages/ngx-agui/src/lib/models/timeline.ts
+  s_a57a2fba20e728::t_09d825257a5627 1-53
+packages/ngx-agui/src/lib/ui/approval-card.component.ts
+  s_a57a2fba20e728::t_dc3a5802960f58 1-103
+packages/ngx-agui/src/lib/ui/confirm-dialog.component.ts
+  s_a57a2fba20e728::t_73acc4dcfe9a29 1-39
+packages/ngx-agui/src/lib/ui/json-view.component.ts
+  s_a57a2fba20e728::t_30f51c162ed5c8 1-22
+packages/ngx-agui/src/lib/ui/timeline.component.ts
+  s_a57a2fba20e728::t_bc39ad30b37eb1 1-55
+packages/ngx-agui/src/lib/ui/tool-card.component.ts
+  s_a57a2fba20e728::t_6f81b69c62618b 1-65
+packages/ngx-agui/src/lib/ui/tool-result-host.component.ts
+  s_a57a2fba20e728::t_1803a282ea92bf 1-46
+packages/ngx-agui/src/public-api.ts
+  s_a57a2fba20e728::t_a0f071d40eb0af 1-23
+packages/ngx-agui/tsconfig.lib.json
+  s_a57a2fba20e728::t_9c39fcb65f28c8 1-22
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.24",
+  "base_commit_sha": "0604624f2ac176fd27fdf077b1c5bd9e66c66106",
+  "prompts": {},
+  "sessions": {
+    "s_a57a2fba20e728": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "ef98205d-43e1-4c23-953f-1729d58b64cb",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Muhammad Asad Ilyas <muhammadilyas@exceedgulf.com>"
+    }
+  }
+}
